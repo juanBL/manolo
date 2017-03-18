@@ -1,0 +1,27 @@
+php_packages:
+  - php7.1-fpm
+  - php7.1-cli
+  - php7.1-common
+  - php7.1-curl
+  - php7.1-json
+  - php7.1-gd
+  - php7.1-mcrypt
+  - php7.1-odbc
+  - php7.1-pgsql
+  - php7.1-mbstring
+  - php7.1-mysql
+  - php7.1-xmlrpc
+  - php7.1-opcache
+  - php7.1-intl
+  - php7.1-bz2
+  - php7.1-xml
+
+# php.ini settings
+php_memory_limit: 512M
+php_max_execution_time: 70
+php_post_max_size: 100M
+php_upload_max_filesize: 100M
+php_display_errors: On
+php_display_startup_errors: On
+php_html_errors: On
+php_date_timezone: Europe/Madrid

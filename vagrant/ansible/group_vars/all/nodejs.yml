@@ -1,0 +1,6 @@
+nodejs_packages:
+   - bower
+   - gulp
+nodejs_version: _6.x
+
+

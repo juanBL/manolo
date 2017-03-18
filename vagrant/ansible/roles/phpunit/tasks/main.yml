@@ -1,0 +1,18 @@
+---
+- name:    Download PHPUnit
+  get_url:
+    url: https://phar.phpunit.de/phpunit.phar
+    dest: /tmp/phpunit.phar
+
+- name:    Add executable permissions to PHPUnit
+  file:
+    path: /tmp/phpunit.phar
+    mode: a+x
+
+- name:    Move PHPunit to /usr/local/bin
+  command: mv /tmp/phpunit.phar /usr/local/bin/phpunit
+
+- name: Delete PHPunit tmp
+  file:
+    state: absent
+    path: /tmp/phpunit.phar
