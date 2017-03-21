@@ -1,6 +1,16 @@
 ---
-  - name: Install nginx
-    apt:  pkg=nginx state=latest
+  - name: System | Update Repository
+    apt: update_cache=yes
+  - name: System | Install python-software-properties
+    apt: pkg=python-software-properties state=latest
+
+  - name: System | Install Build-Essentials
+    apt: pkg=build-essential state=latest
+
+  - name: NGINX | Remove Apache
+    apt: pkg=apache2 state=absent purge=yes
+  - name: NGINX | Install NGINX
+    apt: pkg=nginx state=latest
 
   - name: Ensure nginx log directory exists
     file: dest=/var/log/nginx/symfony state=directory
